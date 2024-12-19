@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,18 +22,31 @@
         h1 {
             font-size: 2.5em;
             color: #00ff00;
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+            text-shadow: 0 0 2px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
         }
         p {
             font-size: 1.2em;
         }
     </style>
+    <script>
+        function obfuscateEmail() {
+            var user = "knilessehnjilk.kneh".split('').reverse().join('');
+
+            var domain = "outlook.com";
+            var email = user + "@" + domain;
+            document.getElementById("email").innerText = "E: " + email;
+
+            document.getElementById("mobile").innerText = "T: +3163840" + (9651 +1); 
+
+        }
+    </script>
 </head>
-<body>
+<body onload="obfuscateEmail()">
     <div class="container">
         <h1>Henk Klijn Hesselink</h1>
         <p>IT Consultant / Software ontwikkelaar</p>
-        <p>henk.klijnhesselink@outlook.com</p>
+        <p id="email"></p>
+        <p id="mobile"></p>
     </div>
 </body>
 </html>
